@@ -1,4 +1,4 @@
-lvtn_stm32h743vit6/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
+lvtn_stm32h743vit6/keypad.o: ..\Core\Src\keypad.c ..\Core\Inc\keypad.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal.h \
   ..\Core\Inc\stm32h7xx_hal_conf.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_rcc.h \
@@ -37,6 +37,4 @@ lvtn_stm32h743vit6/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
-  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
-  ..\Core\Inc\ina3221.h ..\Core\Inc\LM75B.h ..\Core\Inc\ads1115.h \
-  ..\Core\Inc\CLCD_I2C.h
+  ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h

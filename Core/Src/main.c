@@ -25,6 +25,7 @@
 #include "LM75B.h"
 #include "ads1115.h"
 #include "CLCD_I2C.h"
+#include "keypad.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -128,6 +129,13 @@ int main(void)
 		//LM75B_INIT
 		LM75B_INIT();
 	
+		//LCD INIT
+		CLCD_I2C_Name LCD1;
+		CLCD_I2C_Init(&LCD1,&hi2c2,0x4e,20,4);
+		
+		//keypad init
+		keypad_init();
+		
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -147,40 +155,48 @@ int main(void)
   MX_USART3_UART_Init();
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
-
+	
+	//LCD wellcome
+	CLCD_I2C_SetCursor(&LCD1, 0, 1);
+	CLCD_I2C_WriteString(&LCD1,"DH Bach Khoa");
+	CLCD_I2C_SetCursor(&LCD1, 0, 2);
+	CLCD_I2C_WriteString(&LCD1,"TP HCM");
+	
   /* USER CODE END 2 */
+	
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
-  {
-
+ {
 
 //		voltage[0] =ADS1115_RVAL();
 //		voltage[1] =ADS1115_RVAL();
 //		voltage[2] =ADS1115_RVAL();
-		voltage[3] = ADS1115_RVAL(3);
-		
-		
-		HAL_Delay(1000);
+//		voltage[3] = ADS1115_RVAL(3);
+//		
+//		
+//		HAL_Delay(1000);
 
-		INAD.Ch1Cur  =INA3221ConfGetCurrent(1)*1000;
-		INAD.Ch1Vol  =INA3221ConfGetBusVoltage(1);
+//		INAD.Ch1Cur  =INA3221ConfGetCurrent(1)*1000;
+//		INAD.Ch1Vol  =INA3221ConfGetBusVoltage(1);
 
-		INAD.Ch2Cur  =INA3221ConfGetCurrent(2)*1000;
-		INAD.Ch2Vol  =INA3221ConfGetBusVoltage(2);
+//		INAD.Ch2Cur  =INA3221ConfGetCurrent(2)*1000;
+//		INAD.Ch2Vol  =INA3221ConfGetBusVoltage(2);
 
-		INAD.Ch3Cur  =INA3221ConfGetCurrent(3)*1000;
-		INAD.Ch3Vol  =INA3221ConfGetBusVoltage(3);
-		
-		
-		BlinkLed();
-		HAL_Delay(10);
-		
-		temperature = LM75B_READ();
-		
-		BlinkLed();
-		HAL_Delay(7000);
+//		INAD.Ch3Cur  =INA3221ConfGetCurrent(3)*1000;
+//		INAD.Ch3Vol  =INA3221ConfGetBusVoltage(3);
+//		
+//		
+//		BlinkLed();
+//		HAL_Delay(10);
+//		
+//		temperature = LM75B_READ();
+//		
+//		BlinkLed();
+//		HAL_Delay(7000);
+
+
 		
 		
     /* USER CODE END WHILE */
