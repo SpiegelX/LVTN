@@ -8,7 +8,7 @@ Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
 License Information: Nguyen Hoang
 BOSCH
 User-based license: Keil MDK Community
-Valid until: Jun 1 2033. Cached until: Jan 1 2024
+Valid until: Jun 1 2033. Cached until: Jan 9 2024
  
 Tool Versions:
 Toolchain:       Keil MDK Community  Version: 5.38.0.0
@@ -25,156 +25,48 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 D:\LVTN\MDK-ARM\LVTN_STM32H743VIT6.uvprojx
-Project File Date:  12/25/2023
+Project File Date:  01/02/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'LVTN_STM32H743VIT6'
 assembling startup_stm32h743xx.s...
-compiling stm32h7xx_it.c...
 compiling LM75B.c...
 compiling ads1115.c...
-../Core/Src/keypad.c(7): error: use of undeclared identifier 'ROW_1_Pin'
-  GPIO_InitStruct.Pin = ROW_1_Pin | ROW_2_Pin | ROW_3_Pin | ROW_4_Pin;
-                        ^
-../Core/Src/keypad.c(7): error: use of undeclared identifier 'ROW_2_Pin'
-  GPIO_InitStruct.Pin = ROW_1_Pin | ROW_2_Pin | ROW_3_Pin | ROW_4_Pin;
-                                    ^
-../Core/Src/keypad.c(7): error: use of undeclared identifier 'ROW_3_Pin'
-  GPIO_InitStruct.Pin = ROW_1_Pin | ROW_2_Pin | ROW_3_Pin | ROW_4_Pin;
-                                                ^
-../Core/Src/keypad.c(7): error: use of undeclared identifier 'ROW_4_Pin'
-  GPIO_InitStruct.Pin = ROW_1_Pin | ROW_2_Pin | ROW_3_Pin | ROW_4_Pin;
-                                                            ^
-../Core/Src/keypad.c(15): error: use of undeclared identifier 'COL_1_Pin'
-  GPIO_InitStruct.Pin = COL_1_Pin | COL_2_Pin | COL_3_Pin;
-                        ^
-../Core/Src/keypad.c(15): error: use of undeclared identifier 'COL_2_Pin'
-  GPIO_InitStruct.Pin = COL_1_Pin | COL_2_Pin | COL_3_Pin;
-                                    ^
-../Core/Src/keypad.c(15): error: use of undeclared identifier 'COL_3_Pin'
-  GPIO_InitStruct.Pin = COL_1_Pin | COL_2_Pin | COL_3_Pin;
-                                                ^
-../Core/Src/keypad.c(29): warning: excess elements in array initializer [-Wexcess-initializers]
-                     {'*', '0', '#'}};
-                     ^~~~~~~~~~~~~~~
-../Core/Src/keypad.c(37): error: use of undeclared identifier 'COL_1_Pin'; did you mean 'COL_1_Port'?
-            HAL_GPIO_WritePin(COL_1_Port, COL_1_Pin, GPIO_PIN_RESET);
-                                          ^~~~~~~~~
-                                          COL_1_Port
-../Core/Inc\keypad.h(10): note: 'COL_1_Port' declared here
-GPIO_TypeDef* COL_1_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(38): error: use of undeclared identifier 'COL_2_Pin'; did you mean 'COL_2_Port'?
-            HAL_GPIO_WritePin(COL_2_Port, COL_2_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_2_Port
-../Core/Inc\keypad.h(11): note: 'COL_2_Port' declared here
-GPIO_TypeDef* COL_2_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(39): error: use of undeclared identifier 'COL_3_Pin'; did you mean 'COL_3_Port'?
-            HAL_GPIO_WritePin(COL_3_Port, COL_3_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_3_Port
-../Core/Inc\keypad.h(12): note: 'COL_3_Port' declared here
-GPIO_TypeDef* COL_3_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(43): error: use of undeclared identifier 'COL_1_Pin'; did you mean 'COL_1_Port'?
-            HAL_GPIO_WritePin(COL_1_Port, COL_1_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_1_Port
-../Core/Inc\keypad.h(10): note: 'COL_1_Port' declared here
-GPIO_TypeDef* COL_1_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(44): error: use of undeclared identifier 'COL_2_Pin'; did you mean 'COL_2_Port'?
-            HAL_GPIO_WritePin(COL_2_Port, COL_2_Pin, GPIO_PIN_RESET);
-                                          ^~~~~~~~~
-                                          COL_2_Port
-../Core/Inc\keypad.h(11): note: 'COL_2_Port' declared here
-GPIO_TypeDef* COL_2_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(45): error: use of undeclared identifier 'COL_3_Pin'; did you mean 'COL_3_Port'?
-            HAL_GPIO_WritePin(COL_3_Port, COL_3_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_3_Port
-../Core/Inc\keypad.h(12): note: 'COL_3_Port' declared here
-GPIO_TypeDef* COL_3_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(49): error: use of undeclared identifier 'COL_1_Pin'; did you mean 'COL_1_Port'?
-            HAL_GPIO_WritePin(COL_1_Port, COL_1_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_1_Port
-../Core/Inc\keypad.h(10): note: 'COL_1_Port' declared here
-GPIO_TypeDef* COL_1_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(50): error: use of undeclared identifier 'COL_2_Pin'; did you mean 'COL_2_Port'?
-            HAL_GPIO_WritePin(COL_2_Port, COL_2_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_2_Port
-../Core/Inc\keypad.h(11): note: 'COL_2_Port' declared here
-GPIO_TypeDef* COL_2_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(51): error: use of undeclared identifier 'COL_3_Pin'; did you mean 'COL_3_Port'?
-            HAL_GPIO_WritePin(COL_3_Port, COL_3_Pin, GPIO_PIN_RESET);
-                                          ^~~~~~~~~
-                                          COL_3_Port
-../Core/Inc\keypad.h(12): note: 'COL_3_Port' declared here
-GPIO_TypeDef* COL_3_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(55): error: use of undeclared identifier 'COL_1_Pin'; did you mean 'COL_1_Port'?
-            HAL_GPIO_WritePin(COL_1_Port, COL_1_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_1_Port
-../Core/Inc\keypad.h(10): note: 'COL_1_Port' declared here
-GPIO_TypeDef* COL_1_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(56): error: use of undeclared identifier 'COL_2_Pin'; did you mean 'COL_2_Port'?
-            HAL_GPIO_WritePin(COL_2_Port, COL_2_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_2_Port
-../Core/Inc\keypad.h(11): note: 'COL_2_Port' declared here
-GPIO_TypeDef* COL_2_Port = GPIOB;
-              ^
-../Core/Src/keypad.c(57): error: use of undeclared identifier 'COL_3_Pin'; did you mean 'COL_3_Port'?
-            HAL_GPIO_WritePin(COL_3_Port, COL_3_Pin, GPIO_PIN_SET);
-                                          ^~~~~~~~~
-                                          COL_3_Port
-../Core/Inc\keypad.h(12): note: 'COL_3_Port' declared here
-GPIO_TypeDef* COL_3_Port = GPIOB;
-              ^
-fatal error: too many errors emitted, stopping now [-ferror-limit=]
-1 warning and 20 errors generated.
-compiling keypad.c...
-compiling stm32h7xx_hal_crc.c...
+compiling stm32h7xx_hal_crc_ex.c...
+compiling main.c...
+compiling stm32h7xx_it.c...
 compiling stm32h7xx_hal_msp.c...
 compiling stm32h7xx_hal_cortex.c...
+compiling stm32h7xx_hal_crc.c...
 compiling LCD.c...
-compiling main.c...
 compiling ina3221.c...
-compiling stm32h7xx_hal_crc_ex.c...
 compiling stm32h7xx_hal_rcc.c...
-compiling stm32h7xx_hal_flash.c...
-compiling stm32h7xx_hal_rcc_ex.c...
 compiling stm32h7xx_hal_hsem.c...
 compiling stm32h7xx_hal_gpio.c...
+compiling stm32h7xx_hal_flash.c...
 compiling stm32h7xx_hal_pwr.c...
 compiling stm32h7xx_hal_flash_ex.c...
-compiling stm32h7xx_hal_i2c_ex.c...
-compiling stm32h7xx_hal.c...
-compiling stm32h7xx_hal_pwr_ex.c...
 compiling stm32h7xx_hal_dma_ex.c...
+compiling stm32h7xx_hal_pwr_ex.c...
+compiling stm32h7xx_hal.c...
 compiling stm32h7xx_hal_mdma.c...
+compiling stm32h7xx_hal_i2c_ex.c...
+compiling stm32h7xx_hal_rcc_ex.c...
 compiling stm32h7xx_hal_exti.c...
 compiling stm32h7xx_hal_spi_ex.c...
-compiling stm32h7xx_hal_dma.c...
 compiling stm32h7xx_hal_tim.c...
+compiling stm32h7xx_hal_dma.c...
 compiling stm32h7xx_hal_tim_ex.c...
 compiling system_stm32h7xx.c...
 compiling stm32h7xx_hal_uart_ex.c...
 compiling stm32h7xx_hal_spi.c...
 compiling stm32h7xx_hal_i2c.c...
 compiling stm32h7xx_hal_uart.c...
-"LVTN_STM32H743VIT6\LVTN_STM32H743VIT6.axf" - 19 Error(s), 1 Warning(s).
+linking...
+Program Size: Code=23922 RO-data=766 RW-data=16 ZI-data=2560  
+FromELF: creating hex file...
+"LVTN_STM32H743VIT6\LVTN_STM32H743VIT6.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -198,7 +90,6 @@ Package Vendor: Keil
 
    * Component: ARM::CMSIS:CORE:5.6.0
       Include file:  CMSIS/Core/Include/tz_context.h
-Target not created.
 Build Time Elapsed:  00:00:03
 </pre>
 </body>

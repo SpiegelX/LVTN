@@ -38,5 +38,4 @@ lvtn_stm32h743vit6/main.o: ..\Core\Src\main.c ..\Core\Inc\main.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_spi_ex.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart.h \
   ..\Drivers\STM32H7xx_HAL_Driver\Inc\stm32h7xx_hal_uart_ex.h \
-  ..\Core\Inc\ina3221.h ..\Core\Inc\LM75B.h ..\Core\Inc\ads1115.h \
-  ..\Core\Inc\CLCD_I2C.h
+  ..\Core\Inc\ina3221.h ..\Core\Inc\LM75B.h ..\Core\Inc\ads1115.h
